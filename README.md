@@ -24,8 +24,8 @@ Run Automation
 	```cd API-Test-Automation```
 3. Run tests
 
-	```py.test```
-
+	```py.test ```
+	
 
 To Consider
 -----------
