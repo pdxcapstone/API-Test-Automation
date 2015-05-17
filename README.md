@@ -1,2 +1,32 @@
 # API-Test-Automation
-python-based test suite for backend api.
+Python-based test suite for backend api.
+
+Requirements
+------------
+1. Python >= 2.7
+2. [pip](https://pip.readthedocs.org/en/1.1/index.html)
+	
+	To install pip, follow the instructions [here](https://pip.readthedocs.org/en/1.1/installing.html).
+3. [requests](http://docs.python-requests.org/en/latest/)
+	
+	```sudo pip install requests```
+4. [pytest](http://pytest.org/latest/contents.html)
+
+	```sudo pip install -U pytest```
+
+Run Automation
+--------------
+1. Clone repo
+
+	```git clone https://github.com/pdxcapstone/API-Test-Automation.git```
+2. cd into new director
+
+	```cd API-Test-Automation```
+3. Run tests
+
+	```py.test```
+
+To Consider
+-----------
+1. Using setuptool to make installing easier.
+2. Continuous Integration.
