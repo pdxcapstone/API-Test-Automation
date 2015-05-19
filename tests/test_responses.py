@@ -24,7 +24,7 @@ def test_get_returns_200_code():
   
 def test_post_returns_200_code():
   """
-  SUMMARY:  Test that invalid POST body returns a 200 code ('ok')
+  SUMMARY:  Test that valid POST body returns a 200 code ('ok')
   METHOD:   (1) Send a POST request with proper post body.
   FAIL:     Status code is not 200.
   """
@@ -42,7 +42,7 @@ def test_post_returns_200_code():
   
 def test_bad_post_returns_400_code():
   """
-  SUMMARY:  Test that POST method returns a 200 code ('bad request')
+  SUMMARY:  Test that invalid POST method returns a 400 code ('bad request')
   METHOD:   (1) Create a improper payload (no firstName).
             (2) Send a POST request with improper post body.
   FAIL:     Status code is not 400.
