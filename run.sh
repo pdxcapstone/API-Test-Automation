@@ -1,3 +1,3 @@
-i#!/bin/sh
+#!/bin/sh
 cd tests;
 py.test;
