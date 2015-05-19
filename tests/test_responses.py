@@ -30,8 +30,8 @@ def test_post_returns_200_code():
   """
   # Arrange
   payload = {
-    'lastName': 'Hampshire',
-    'firstName': 'Aaron'
+    'name': 'Aaron Hampshire',
+    'token': 'asdfasdf'
   }
   
   # Act
@@ -49,7 +49,7 @@ def test_bad_post_returns_400_code():
   """
   # Arrange
   payload = {
-    'lastName': 'Hampshire'
+    'name': 'Aaron Hampshire'
   }
   
   # Act
