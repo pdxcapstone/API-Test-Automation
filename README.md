@@ -1,3 +1,4 @@
+https://travis-ci.org/pdxcapstone/API-Test-Automation.svg?branch=master
 # API-Test-Automation
 Python-based test suite for backend api.
 
