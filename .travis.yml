@@ -10,3 +10,5 @@ install:
   - "pip install -U pytest"
 # command to run tests
 script: py.test
+notification:
+  slack: HtNpXM3yjofxZG3sqvBP27QN#travis
