@@ -16,7 +16,7 @@ Requirements
 	```sudo pip install -U pytest```
 5. Install pymongo
   
-        ```sudo pip install pymongo```
+	```sudo pip install pymongo```
 Run Automation
 --------------
 1. Clone repo
