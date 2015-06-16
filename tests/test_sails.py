@@ -1,5 +1,6 @@
 from config import *
 
+
 """
 TEST RESPONSES
 Includes all status code responses for both get and post requests.
