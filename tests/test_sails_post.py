@@ -3,23 +3,9 @@ from config import *
 
 """
 TEST RESPONSES
-Includes all status code responses for both get and post requests.
+Includes all status code responses for post requests.
 """
 
-def test_get_no_param_200_code():
-  """
-  SUMMARY:  Test that GET method returns a 200 code ('ok')
-  METHOD:   Send a GET request with no parameteres.
-  FAIL:     Status code is not 200.
-  """
-  
-  # Act
-  r = requests.get('http://capstonedd.cs.pdx.edu:1337/users')
-
-  # Assert
-  assert r.status_code == 200
-  
-  
 def test_post_returns_200_code():
   """
   SUMMARY:  Test that valid POST body returns a 200 code ('ok')
@@ -45,20 +31,6 @@ def test_post_inserts_record():
 
   # Assert
   assert collection.count(findq) == 1
-  
-  
-def test_get_param_200_code(insert_test):
-  """
-  SUMMARY:  Test that GET method returns a 200 code ('ok')
-  METHOD:   Send a GET request with required parameters.
-  FAIL:     Status code is not 200.
-  """
-  
-  # Act
-  r = requests.get('http://capstonedd.cs.pdx.edu:1337/users', data=datafquery)
-  
-  # Assert
-  assert r.status_code == 200
   
   
 def test_bad_post1_returns_400_code(insert_test):
@@ -175,43 +147,3 @@ def test_bad_post3_fails_insertion():
   # Assert
   assert collection.count(findq) == 0
   
-def test_delete_no_records_returns_200_code():
-  """
-  SUMMARY:  Test that DELETE method returns a 200 code if no records found
-  METHOD:   (1) Create a improper payload (No records).
-            (2) Send a POST request with improper post body.
-  FAIL:     Status code is not 200.
-  """
-  
-  # Act
-  r = requests.delete('http://capstonedd.cs.pdx.edu:1337/users', data=datafquery)
-
-  # Assert
-  assert r.status_code == 200
-  
-  
-def test_delete_returns_200_code(insert_test):
-  """
-  SUMMARY:  Test that proper DELETE method returns a 200 code ('ok')
-  METHOD:   Send a DELETE request with proper post body.
-  FAIL:     Status code is not 200.
-  """
-  
-  # Act
-  r = requests.delete('http://capstonedd.cs.pdx.edu:1337/users', data=datafquery)
-  
-  # Assert
-  assert r.status_code == 200
-    
-def test_delete_deletes_record(insert_test):
-  """
-  SUMMARY:  Test that proper DELETE method deletes the record.
-  METHOD:   Send a DELETE request with proper post body.
-  FAIL:     Record has not been deleted.
-  """
-  
-  # Act
-  r = requests.delete('http://capstonedd.cs.pdx.edu:1337/users', data=datafquery)
-  
-  # Assert
-  assert collection.count(findq) == 0

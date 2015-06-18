@@ -21,6 +21,10 @@ def insert_test(request):
       collection.delete_many(findq)
   request.addfinalizer(fin)
   
+@pytest.fixture(scope="function")
+def get_record_id(request):
+  r = collection.find_one(query)
+  return str(r['_id']);
 
 
 
