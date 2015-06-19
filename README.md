@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/pdxcapstone/API-Test-Automation.svg?branch=sails_test)](https://travis-ci.org/pdxcapstone/API-Test-Automation)
+[![Build Status](https://travis-ci.org/pdxcapstone/API-Test-Automation.svg?branch=master)](https://travis-ci.org/pdxcapstone/API-Test-Automation)
 # API-Test-Automation
 Python-based test suite for backend api.
 
